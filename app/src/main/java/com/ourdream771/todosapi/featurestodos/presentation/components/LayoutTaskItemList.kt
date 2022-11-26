@@ -14,6 +14,7 @@ fun TaskItemList(list:List<Todos>){
         items(list.size) {index ->
             TaskItem(
                 name = list[index].title ,
+                checked = list[index].completed,
                 onClick = { }
             )
         }

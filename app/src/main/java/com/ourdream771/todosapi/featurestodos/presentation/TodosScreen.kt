@@ -9,8 +9,7 @@ import com.ourdream771.todosapi.featurestodos.presentation.components.TaskItemLi
 fun TodosScreen(){
 
     val viewModel:TodosViewModel = viewModel()
-
-    TaskItemList(viewModel.taskList)
+    TaskItemList(viewModel.state.value.todosList)
 
 
 }

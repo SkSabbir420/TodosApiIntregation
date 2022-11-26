@@ -18,11 +18,10 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun TaskItem(
     name:String,
+    checked:Boolean,
     onClick: ()->Unit,
 
 ){
-    var checked by rememberSaveable{ mutableStateOf(false) }
-
     Row(
         modifier = Modifier
             .padding(16.dp)
@@ -34,14 +33,8 @@ fun TaskItem(
         )
         Checkbox(
             checked = checked ,
-            onCheckedChange  ={ checked = it }
+            onCheckedChange  ={  }
         )
-        IconButton(onClick = onClick) {
-            Icon(Icons.Filled.Close,contentDescription = "Close")
-
-        }
-
-
     }
 }
 
